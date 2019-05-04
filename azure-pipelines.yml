@@ -13,14 +13,14 @@ variables:
 - group: myVariableGroup
 
 steps:
-- script: echo Hello, $env:MY_VARIABLE!
+- script: echo Hello, $MY_VARIABLE!
   displayName: 'Run a one-line script'
   env:
     MY_VARIABLE: $(myVariable)
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
-    echo My secret variable group variable is $env.MY_GROUP_VARIABLE
+    echo My secret variable group variable is $MY_GROUP_VARIABLE
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
   env:
