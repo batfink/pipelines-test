@@ -9,6 +9,9 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+variables:
+- group: myVariableGroup
+
 steps:
 - script: echo Hello, $env:MY_VARIABLE!
   displayName: 'Run a one-line script'
