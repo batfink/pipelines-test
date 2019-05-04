@@ -20,6 +20,7 @@ steps:
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
+    echo My secret variable group variable is $env.MY_GROUP_VARIABLE
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
   env:
