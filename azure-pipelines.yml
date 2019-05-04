@@ -10,8 +10,10 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
+- script: echo Hello, $env:MY_VARIABLE!
   displayName: 'Run a one-line script'
+  env:
+    MY_VARIABLE: $(myVariable)
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
